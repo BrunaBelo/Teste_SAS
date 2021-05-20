@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: postgresql
+  pool: 5
+
+development:
+  <<: *default
+  database: chinchilla_food_development
+
+test:
+  <<: *default
+  database: chinchilla_food_test
