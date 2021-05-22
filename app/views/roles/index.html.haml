@@ -1,0 +1,14 @@
+%h1 Listing roles
+
+%table
+  %thead
+    %tr
+      %th Name
+
+  %tbody
+    - @roles.each do |role|
+      %tr
+        %td= role.name
+%br
+
+= link_to 'New Role', new_role_path
