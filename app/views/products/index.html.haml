@@ -1,0 +1,20 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Quantity
+      %th Price
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.description
+        %td= product.quantity
+        %td= product.price
+%br
+
+= link_to 'New Product', new_product_path
