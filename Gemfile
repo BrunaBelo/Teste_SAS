@@ -21,6 +21,10 @@ gem 'devise'
 gem 'cancancan'
 # Manage roles
 gem 'rolify'
+# Bootstrap Css
+gem 'bootstrap', '~> 4.0.0'
+# jQuery-rails'
+gem 'jquery-rails'
 
 gem "haml-rails", "~> 2.0"
 
