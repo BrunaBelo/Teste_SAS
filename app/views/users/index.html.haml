@@ -4,13 +4,11 @@
   %thead
     %tr
       %th Name
-      %th Role
 
   %tbody
     - @users.each do |user|
       %tr
         %td= user.name
-        %td= user.role.name
 %br
 
 = link_to 'New User', new_user_path

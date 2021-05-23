@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 # Authorization
 gem 'cancancan'
+# Manage roles
+gem 'rolify'
 
 gem "haml-rails", "~> 2.0"
 
