@@ -5,10 +5,11 @@ class Ability
 
   def initialize(user)
     user ||= User.new
-    if user.admin?
+    if user.has_role?(:admin)
       can :manage, :all
-    elsif user.employee_marketing?
+    elsif user.has_role?(:employee_marketing)
       can :manage, Product
+      can :index, User
     else
       can :read, :all
     end
