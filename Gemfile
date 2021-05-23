@@ -22,7 +22,7 @@ gem 'cancancan'
 # Manage roles
 gem 'rolify'
 # Bootstrap Css
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap-sass'
 # jQuery-rails'
 gem 'jquery-rails'
 
