@@ -4,7 +4,11 @@ class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     def after_sign_in_path_for(resource)
+      if current_user.has_role?(:admin)
         users_path
+      elsif current_user.has_role?(:employee_marketing)
+        products_path
+      end
     end
 
     protected

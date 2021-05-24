@@ -9,7 +9,6 @@ class Ability
       can :manage, :all
     elsif user.has_role?(:employee_marketing)
       can :manage, Product
-      can :index, User
     else
       can :read, :all
     end
