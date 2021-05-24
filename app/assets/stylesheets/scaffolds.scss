@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
   background-color: #fff;
   color: #333;
@@ -51,17 +54,11 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  @extend .alert;
 
   h2 {
     text-align: left;

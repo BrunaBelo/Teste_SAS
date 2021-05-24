@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
   before_action :set_user, only: %i[ edit update destroy ]
-  before_action :user_roles, only: %i[ new edit update ]
+  before_action :user_roles, only: %i[ create new edit update ]
 
   #constants
   ROLES = [['Admin', :admin], ['Funcionário Marketing', :employee_marketing]].freeze
