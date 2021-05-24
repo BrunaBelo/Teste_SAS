@@ -28,7 +28,9 @@ gem 'jquery-rails'
 
 # Upload images
 gem 'carrierwave', '~> 2.0'
-
+# Icons
+gem "font-awesome-rails"
+# Haml
 gem "haml-rails", "~> 2.0"
 
 # Use CoffeeScript for .coffee assets and views
