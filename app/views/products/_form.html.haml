@@ -5,18 +5,20 @@
       %ul
         - @product.errors.full_messages.each do |message|
           %li= message
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :price
-    = f.number_field :price
-  .field
-    = f.label :image
-    = f.file_field :image
-  .actions
-    = f.submit 'Save'
+  #form-new-product
+    #form-product
+      %h1 Dados do Produto
+      .form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+      .form-group
+        = f.label :description
+        = f.text_area :description, class: 'form-control'
+      .form-group
+        = f.label :price
+        = f.number_field :price, class: 'form-control'
+      .form-group
+        = f.label :image
+        = f.file_field :image, class: 'form-control-file'
+    .actions.text-center
+      #save-new-product= f.submit 'Salvar', class: 'btn btn-primary'
