@@ -2,26 +2,23 @@
     .container
         = render 'layouts/nav/nav_product_listing'
         .row
-            .col-md-3#filters-products
-                %h4 Idade
-                %p= check_box_tag 'junior', '1 a 5'
-                %p= check_box_tag 'senior', '6 a 10'
+            .col-md-3#filters-products.col{ data: { url: product_listing_products_path } }
                 %h4#price Preço
-                %p= check_box_tag :low, 'R$ 0,00 a R$ 50,00'
-                %p= check_box_tag :medium, 'R$ 51,00 a R$ 100,00'
-                %p= check_box_tag :high, 'R$ 101,00 a R$ 200,00'
+                .form-check
+                    %label.radio-inline
+                        .form-check-input= radio_button_tag :filter_category, :category_low
+                        .form-check-label= 'R$ 0,00 a R$ 50,00'
+                .form-check
+                    %label.radio-inline
+                        .form-check-input= radio_button_tag :filter_category, :category_medium
+                        .form-check-label= 'R$ 51,00 a R$ 100,00'
+                .form-check
+                    %label.radio-inline
+                        .form-check-input= radio_button_tag :filter_category, :category_high
+                        .form-check-label= 'R$ 101,00 a R$ 200,00'
             .col-md-9
                 %h1 Uma variedade de rações para sua Chinchila
+                #list-products= render 'list_products', products_list: @products
 
-                - @products.each_slice(4) do |products|
-                    .row.row-products
-                        - products.each do |product|
-                            .col-product.col-md-3
-                                .card
-                                    .card-img-top.text-center= image_tag(product.image.url, size: "150")
-                                    .card-body
-                                        .card-title.text-wrap= product.name
-                                        %p.card-text.text-wrap= product.description
-                                        %p.price= "R$ #{product.price}"
-                    
-    
+:coffeescript
+    window.loadListiningProduct();

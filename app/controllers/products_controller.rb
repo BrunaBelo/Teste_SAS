@@ -44,9 +44,19 @@ class ProductsController < ApplicationController
 
   def product_listing
     @products = Product.all
+    @products = Product.price_beetwen(params['category']['start'], params['category']['end']) if category?
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
+    def category?
+      params['category'].present?
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
