@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
-  before_action :set_user, only: %i[ show ]
-  before_action :user_roles, only: %i[ new ]
+  before_action :set_user, only: %i[ edit update destroy ]
+  before_action :user_roles, only: %i[ new edit update ]
 
   #constants
   ROLES = [['Admin', :admin], ['Funcionário Marketing', :employee_marketing]].freeze
@@ -16,6 +16,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+  end
+
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
@@ -27,6 +30,23 @@ class UsersController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to users_path, notice: 'User was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
     end
   end
 
