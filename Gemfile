@@ -26,6 +26,9 @@ gem 'bootstrap-sass'
 # jQuery-rails'
 gem 'jquery-rails'
 
+# Upload images
+gem 'carrierwave', '~> 2.0'
+
 gem "haml-rails", "~> 2.0"
 
 # Use CoffeeScript for .coffee assets and views
