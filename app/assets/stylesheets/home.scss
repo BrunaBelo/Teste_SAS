@@ -1,3 +1,44 @@
-#oiiiiii {
-    color: blue;
+#home-index{
+    #brand-shop{
+        position: absolute;
+        left: 45%;
+        margin-left: -50px !important;
+        display: block;
+        margin-top: 7px;
+    }
+
+    i:hover{
+        color: #4267B2;
+        cursor: pointer;
+    }
+
+    #body-index{
+        #description{
+            margin-top: 7em;
+    
+            button{
+                border-radius: 10em;
+            }
+    
+            a{
+                color: white;
+            }
+        }
+    
+        #imagem{
+            margin-top: 5em;
+            padding-right: 3em;
+        } 
+    
+        p{
+            margin: 1em 0 2em 0;
+            font-size: 24px;
+            line-height: 37px;
+        }
+    
+        h1{
+            font-size: 48px;
+            font-weight: bold;
+        }
+    } 
 }

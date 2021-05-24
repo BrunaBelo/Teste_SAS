@@ -16,3 +16,15 @@
  
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
+
+ body {
+  background: #f2f2f2;
+ }
+
+ a:hover{
+    color:black;
+    background-color: #f2f2f2;
+ }
+ 
+
