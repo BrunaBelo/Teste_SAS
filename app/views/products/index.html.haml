@@ -1,19 +1,23 @@
-%h1 Listing products
+.container
+  = render 'layouts/nav/nav_user'
+  %h1.text-center Lista de Produtos
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Price
+  #entity-listing
+    %table.table.table-hover
+      %thead
+        %tr
+          %th ID
+          %th Name
+          %th.text-right Ações
 
-  %tbody
-    - @products.each do |product|
-      %tr
-        %td= product.name
-        %td= product.description
-        %td= product.price
-        %td= image_tag(product.image_url.to_s)
-%br
-
-= link_to 'New Product', new_product_path
+      %tbody
+        - @products.each do |product|
+          #row_product
+            %tr
+              %th= product.id
+              %td= product.name
+              %td.text-right
+                %span#edit
+                  =link_to(fa_icon('pencil'), new_product_path)
+                %span#remove.text-danger
+                  =link_to(fa_icon('trash'), new_product_path)
