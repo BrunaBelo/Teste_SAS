@@ -1,17 +1,17 @@
 Primeiramente agradeço a oportunidade que foi me dada para realizar o teste, apesar de ser em um tempo bem "corrido", foi uma experiência bem interessante e que gostei bastante de estar envolvida...
 
 A aplicação pode ser testada por meio do Docker:
-    docker-compose up
-    docker-compose run web rake:db create
-    docker-compose run web rake:db migrate
-    docker-compose run web rake:db seed
+    - docker-compose up
+    - docker-compose run web rake:db create
+    - docker-compose run web rake:db migrate
+    - docker-compose run web rake:db seed
 
 O usuário de acesso Admin é: Login: admin@exemple.com, Senha: 123456
 O usuário de acesso Funcionário Marketing é: Login: marketing@exemple.com, Senha: 123456
 
-Foram implementados alguns testes no Controller
+Foram implementados alguns testes no Controller.
 
-E para facilitar a visualização e teste, foi realizado deploy da aplicação no Heroku, onde pode ser visualizada em: - [Rails Guide](https://chinchila-food.herokuapp.com/)
+E para facilitar a visualização e teste, foi realizado deploy da aplicação no Heroku, onde pode ser visualizada em: - [chinchila-food](https://chinchila-food.herokuapp.com/)
 
 # Desafio Dev. JR Portabilis SAS
 
