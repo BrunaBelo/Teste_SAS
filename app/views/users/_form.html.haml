@@ -6,17 +6,21 @@
         - @user.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :password
-    = f.password_field :password
-  .field
-    = f.label :role
-    = collection_select(:user, :role_id, Role.all, :id, :name, { prompt: true })
-  .actions
-    = f.submit 'Save'
+  #form-new-entity
+    #form-entity
+      %h1 Dados do Usuário
+      .form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+      .form-group
+        = f.label :email
+        = f.text_field :email, class: 'form-control'
+      .form-group
+        = f.label :password
+        = f.password_field :password, class: 'form-control'
+      .form-group
+        = f.label :type_role
+        = select_tag "user[type_role]", options_for_select(@user_roles), class: 'form-control'
+
+    .actions.text-center
+      #save-new-entity= f.submit 'Salvar', class: 'btn btn-primary'

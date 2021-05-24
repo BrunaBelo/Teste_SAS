@@ -5,8 +5,8 @@
       %ul
         - @product.errors.full_messages.each do |message|
           %li= message
-  #form-new-product
-    #form-product
+  #form-new-entity
+    #form-entity
       %h1 Dados do Produto
       .form-group
         = f.label :name
@@ -21,4 +21,4 @@
         = f.label :image
         = f.file_field :image, class: 'form-control-file'
     .actions.text-center
-      #save-new-product= f.submit 'Salvar', class: 'btn btn-primary'
+      #save-new-entity= f.submit 'Salvar', class: 'btn btn-primary'

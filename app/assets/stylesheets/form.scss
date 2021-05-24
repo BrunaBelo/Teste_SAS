@@ -1,0 +1,36 @@
+#form-new-entity{
+    margin-top: 2em;
+
+    h1{
+        margin-bottom: 1em;
+    }
+
+    label, h1{
+        color:white;
+    }
+
+    #form-entity{
+        border-radius: 2em;
+        margin: 0 auto;
+        padding: 5px 4em 4em 4em;
+    }
+
+    #save-new-entity input{
+        margin-top: 1em;
+        height: 3em;
+        border-radius: 1em;
+    }
+
+    #save-new-entity input, #form-entity{
+        background-color: #9DC2FF;
+        border-color: transparent;
+        width: 55%;
+    }
+
+    #save-new-entity input:hover{
+        color: #4267B2;
+        cursor: pointer;
+        border-color: #4267B2;
+        font-weight: bold;
+    }
+}

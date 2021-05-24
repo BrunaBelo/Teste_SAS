@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show ]
+  before_action :user_roles, only: %i[ new ]
+
+  #constants
+  ROLES = [['Admin', :admin], ['Funcionário Marketing', :employee_marketing]].freeze
 
   # GET /users or /users.json
   def index
@@ -15,6 +19,7 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
+    @user.add_role(@user.type_role)
 
     respond_to do |format|
       if @user.save
@@ -26,6 +31,10 @@ class UsersController < ApplicationController
   end
 
   private
+    def user_roles
+      @user_roles = ROLES
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -33,6 +42,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :role_id, :email, :password)
+      params.require(:user).permit(:name, :email, :password, :type_role)
     end
 end
