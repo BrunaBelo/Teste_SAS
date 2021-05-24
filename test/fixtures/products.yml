@@ -4,8 +4,11 @@ one:
   name: MyString
   description: MyText
   price: 9.99
+  image: image.png
 
 two:
   name: MyString
   description: MyText
   price: 9.99
+  image: image.png
+

@@ -1,9 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+admin:
+  name: Admin
+  email: admin@example.com
+  roles: admin
 
-one:
-  name: MyString
-  role: one
-
-two:
-  name: MyString
-  role: two
+employee_marketing:
+  name: Funcionario Marketing
+  email: marketing@example.com
+  roles: employee_marketing
