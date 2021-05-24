@@ -11,6 +11,8 @@ O usuário de acesso Funcionário Marketing é: Login: marketing@exemple.com, Se
 
 Foram implementados alguns testes no Controller
 
+E para facilitar a visualização e teste, foi realizado deploy da aplicação no Heroku, onde pode ser visualizada em: - [Rails Guide](https://chinchila-food.herokuapp.com/)
+
 # Desafio Dev. JR Portabilis SAS
 
 Primeiro, parabéns por chegar até aqui.
