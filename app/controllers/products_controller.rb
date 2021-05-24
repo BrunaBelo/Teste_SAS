@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:product_listing]
   before_action :set_product, only: %i[ edit update destroy ]
 
   def index
@@ -40,6 +40,10 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
     end
+  end
+
+  def product_listing
+    @products = Product.all
   end
 
   private

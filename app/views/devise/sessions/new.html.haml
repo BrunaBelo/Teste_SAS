@@ -3,7 +3,7 @@
     %h1= 'BEM VINDO'
     #produtos
       %span= 'Quer ver os produtos?'
-      = link_to 'Clique aqui', products_path
+      = link_to 'Clique aqui', product_listing_products_path
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .row
         .col-md-6

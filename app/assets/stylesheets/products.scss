@@ -1,0 +1,35 @@
+#product-listing{
+    h4, .card-title, .price{
+        font-weight: bold;
+    }
+
+    #filters-products{
+        margin-top: 8em;
+    }
+
+    #price{
+        margin-top: 2em;
+    }
+
+    .image-product{
+        width: 5em;
+        height: 5em;
+    }
+
+    .row-products, h1 {
+        margin-bottom: 1em;
+    }
+
+    .card{
+        background-color: white;
+        width: 210px;
+        height: 285px;
+        padding: 10px 0 0 5px;
+        border-radius: 1em;
+    }
+
+    .card-img-top img{
+        border-radius: 1em;
+        margin-bottom: 10px;
+    }
+}
